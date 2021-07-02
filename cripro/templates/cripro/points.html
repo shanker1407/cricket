@@ -1,0 +1,25 @@
+<h1>Points Table</h1>
+<table border="2" align="top">
+    <thead>
+    <tr>
+
+        <th>Team Name</th>
+        <th>matches played</th>
+        <th>won</th>
+        <th>points</th>
+    </tr>
+    </thead>
+    <tbody>
+{% for team in point %}
+
+    <tr>
+        <td>{{team.team.team_name}}</td>
+        <td>{{team.played}}</td>
+        <td>{{team.won}}</td>
+        <td>{{team.points}}</td>
+        <br>
+    </tr>
+       {% endfor %}
+    </tbody>
+</table>
+<a href="/cripro/">back</a>

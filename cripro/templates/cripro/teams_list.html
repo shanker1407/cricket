@@ -1,0 +1,30 @@
+<h1>Teams List</h1>
+<table border="2" align="top">
+    <thead>
+    <tr>
+        <th>logo</th>
+        <th>Team Name</th>
+        <th>state</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for team in teams %}
+
+    <tr>
+        <td><img src="/media/{{team.2}}" height="50" width="50"></td>
+        <td><a href="/cripro/{{team.0}}/team_players/">{{team.1}}</a></td>
+        <td>{{team.3}}</td>
+        <br>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+<a href="/cripro/add_player/">Add players</a><br>
+<a href="/cripro/matches/">Conduct Matches</a><br>
+<a href="/cripro/points/">Points Table</a><br>
+<a href="/cripro/history/">Schedule matches</a><br>
+{% if error %}
+{{error}}
+{% endif %}

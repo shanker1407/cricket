@@ -1,0 +1,23 @@
+<h1>Match History</h1>
+<table border="2" align="top">
+    <thead>
+    <tr>
+        <th>team1</th>
+        <th>team2</th>
+        <th>winner</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for each in match %}
+
+    <tr>
+        <td>{{each.team1}}</td>
+        <td>{{each.team2}}</td>
+        <td>{{each.result}}</td>
+        <br>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+
+<a href="/cripro/">back</a>

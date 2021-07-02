@@ -1,0 +1,19 @@
+<h1>Player Info</h1>
+
+<b>Fname:</b>{{player.player_fname}}<br>
+<b>Lname:</b>{{player.player_lname}}<br>
+<b>Team:</b>{{player.team.team_name}}<br>
+<b>image:</b><img src="{{player.player_image.url}}" width="100px" height="100px"><br>
+<b>country:</b>{{player.player_country}}<br>
+<b>jersey no:</b>{{player.jersey_number}}<br>
+<b>total matche:</b>{{player.total_matches}}<br>
+<b>Total runs:</b>{{player.total_runs}}<br>
+<b>total 100s:</b>{{player.hundreds}}<br>
+<b>total 5os:</b>{{player.half_centuries}}<br>
+<b>highest score:</b>{{player.highest_score}}<br>
+<b>total eickets:</b>{{player.total_wickets}}<br>
+<b>highest wickets:</b>{{player.highest_wickets}}<br>
+
+<br>
+
+<a href="/cripro/{{player.team.id}}/team_players/">back</a>

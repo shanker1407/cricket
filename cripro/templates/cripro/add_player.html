@@ -1,0 +1,9 @@
+<h1>Add Players To Team</h1>
+
+<form action="/cripro/save_player/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{form.as_p}}
+    <input type="submit" value="submit">
+
+</form>
