@@ -1,0 +1,9 @@
+what is diff bw list and tuple
+df bw mutable and immutable
+diff bw append and extend
+diff bw array and list
+diff bw dict and set
+what are mutable and immutable datatype
+diff bw index and find
+diff bw partition and split
+why do we preffer dictionary rather than list
