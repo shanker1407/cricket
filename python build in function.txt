@@ -1,0 +1,285 @@
+(Q)Python Built Functions
+
+(1) abs(): Returns the absolute value of a number.
+x = abs(-7.25)
+print(x) --->7.25
+----------------------------------------------------------------------
+(2) all(): Returns True if all items in an iterable object are true.
+mylist = [1,2,3,4]
+x = all(mylist) --->o/p=True
+
+mylist = [1,0,3,4]
+x = all(mylist)
+print(x)--->o/p=False
+---------------------------------------------------------------------------
+(3) any(): The any() function returns True if any item in an iterable are true, otherwise it returns False.
+
+If the iterable object is empty, the any() function will return False.
+mylist = [1,0,2,3]
+x = any(mylist)
+print(x)---->True
+
+mylist = []
+x = any(mylist)
+print(x)--->False
+------------------------------------------------------------------------------------------------------
+(4) ascii(): The ascii() function returns a readable version of any object (Strings, Tuples, Lists, etc).
+
+The ascii() function will replace any non-ascii characters with escape characters.
+å will be replaced with \xe5.
+
+ x = ascii("My name is Udåy")
+ print(x)--->o/p = My name is Ud\xe5y
+-------------------------------------------------------------------------------------------------------------
+(5) bin(): The bin() function returns the binary version of a specified integer.
+
+The result will always start with the prefix 0b.
+x = bin(36)
+print(x)--->o/p= 0b100100
+--------------------------------------------------------------------------------------------------------
+(5)Bool(): The bool() function returns the boolean value of a specified object.
+
+The object will always return True, unless:
+
+The object is empty, like [], (), {}
+The object is False
+The object is 0
+The object is None
+
+x = bool(1)-->True
+x = bool(0)-->False
+----------------------------------------------------------------------------------------------------------
+(6) bytearry(): The bytearray() function returns a bytearray object.
+
+It can convert objects into bytearray objects, or create empty bytearray object of the specified size.
+
+x = bytearray(4)
+print(x)---->o/p = bytearray(b'\x00\x00\x00\x00')
+---------------------------------------------------------------------------------------------------------
+(7) bytes() : The bytes() function returns a bytes object.
+
+It can convert objects into bytes objects, or create empty bytes object of the specified size.
+
+x = bytes(4)
+print(x)-->o/p --b'\x00\x00\x00\x00'
+-------------------------------------------------------------------------------------------------------------------
+(8) callable(): The callable() function returns True if the specified object is callable, otherwise it returns False.
+
+def x():
+  a = 5
+
+print(callable(x))--->True
+----------------------------------------------------------------------------------------------------------------------
+(9) chr(): The chr() function returns the character that represents the specified unicode.
+x = chr(97)
+print(x)-->o/p = a
+
+x = chr(65)
+print(x)---> o/p = A
+------------------------------------------------------------------------------------------------------------------------
+(10) compile(): The compile() function returns the specified source as a code object, ready to be executed.
+x = compile('print(55)', 'test', 'eval')
+exec(x)--->o/p = 55
+x = compile('print(55)\nprint(88)', 'test', 'exec')
+exec(x)-->55
+          88
+-------------------------------------------------------------------------------------------------------------------------
+(11) complex(): The complex() function returns a complex number by specifying a real number and an imaginary number.
+x = complex(3, 5)
+print(x)---> (3+5j)
+---------------------------------------------------------------------------------------------------------------------
+(12) delattr(): The delattr() function will delete the specified attribute from the specified object.
+
+class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+
+x = delattr(Person, 'age')
+print(x)---> None
+
+ getattr() : The getattr() function returns the value of the specified attribute from the specified object.
+
+  class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+
+x = getattr(Person, 'age')
+print(x) ---> 36
+
+
+  The hasattr() function returns True if the specified object has the specified attribute, otherwise False.
+   class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+
+x = hasattr(Person, 'age')
+print(x)--->True
+
+
+      setattr() : The setattr() function sets the value of the specified attribute of the specified object.
+       class Person:
+  name = "John"
+  age = 36
+  country = "Norway"
+
+x = setattr(Person, 'age', 40)
+print(x)---->40
+------------------------------------------------------------------------------------------------------------
+(13) dir() : The dir() function returns all properties and methods of the specified object, without the values.
+
+This function will return all the properties and methods, even built-in properties which are default for all object.
+--------------------------------------------------------------------------------------------------------------------------
+(14) divmod() : The divmod() function returns a tuple containing the quotient  and the remainder when argument1 (dividend) is divided by argument2 (divisor).
+
+x = divmod(5, 2)
+print(x)-----> o/p = (2,1)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+(15) enumerate() : The enumerate() function takes a collection (e.g. a tuple) and returns it as an enumerate object.
+
+The enumerate() function adds a counter as the key of the enumerate object.
+x = ('apple', 'banana', 'cherry')
+y = enumerate(x)
+print(list(y))---->o/p = [(0, 'apple'), (1, 'banana'), (2, 'cherry')]
+---------------------------------------------------------------------------------------------------------------------------------------------
+(16) eval() : functions used if we want to convert string to int, float,bool
+x = 'print(55)'
+eval(x)-----> 55
+----------------------------------------------------------------------------------------------------------
+(17) exec() : The exec() function executes the specified Python code.
+
+The exec() function accepts large blocks of code, unlike the eval() function which only accepts a single expression
+
+x = 'name = "John"\nprint(name)'
+exec(x)---->o/p = john
+------------------------------------------------------------------------------------------------------------------------
+(18) filter() : filter function can be used to filter objects from the given sequence based on some condation.
+ filter(function, sequence)
+ l = [0,1,2,3,4,5,6,7,8,9,10]
+ def iseven(n):
+     if n%2==0:
+         return True
+     else :
+         return False
+
+ l1 = list(filter(iseven, l))
+ print(l1)---->o/p = [0,2,4,6,8,10]
+---------------------------------------------------------------------------------------------------------------------------
+(19) map(): if your planning to apply functionality for each and very element in a iterable.
+
+l = [1,2,3,4]
+def squareIt(n):
+    return n*n
+l1 = list(map(squareIt, l))
+print(l)---->o/p = [1,4,9,16]
+----------------------------------------------------------------------------------------------------------------------
+(20) globals() : The globals() function returns the global symbol table as a dictionary.
+
+A symbol table contains necessary information about the current program
+x = globals()
+print(x)
+-------------------------------------------------------------------------------------------------------------------
+(21) isinstance(): The isinstance() function returns True if the specified object is of the specified type, otherwise False.
+
+If the type parameter is a tuple, this function will return True if the object is one of the types in the tuple.
+
+x = isinstance(5, int)
+print(x)----> True
+-----------------------------------------------------------------------------------------------------
+(22) locals(): The locals() function returns the local symbol table as a dictionary.
+
+A symbol table contains necessary information about the current program.
+
+----------------------------------------------------------------------------------------------------------
+(23) : range(): The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.
+
+x = range(6)
+for n in x:
+    print(n)
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+(24) reversed(): The reversed() function returns a reversed iterator object.
+alph = ["a", "b", "c", "d"]
+ralph = reversed(alph)
+for x in ralph:
+  print(x)
+------------------------------------------------------------------------------------------------------------------------
+(25) round(): The round() function returns a floating point number that is a rounded version of the specified number, with the specified number of decimals.
+
+The default number of decimals is 0, meaning that the function will return the nearest integer.
+x = round(5.76543)
+print(x)
+------------------------------------------------------------------------------------------------------------------------------------------
+(26) slice(): The slice() function returns a slice object.
+
+A slice object is used to specify how to slice a sequence. You can specify where to start the slicing, and where to end. 
+You can also specify the step, which allows you to e.g. slice only every other item.
+
+s = ("a", "b", "c", "d", "e", "f", "g", "h")
+s[1::2] ------>o/p = ('b', 'd', 'f', 'h')
+-----------------------------------------------------------------------------------------------------------------------------
+(27) sorted(): The sorted() function returns a sorted list of the specified iterable object.
+
+You can specify ascending or descending order. Strings are sorted alphabetically, and numbers are sorted numerically.
+a = ("b", "g", "a", "d", "f", "c", "h", "e")
+x = sorted(a)
+print(x)
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
